@@ -93,7 +93,8 @@ namespace AngularSpa
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseAngularCliServer(npmScript: "start");
+                    // spa.UseAngularCliServer(npmScript: "start --ssl");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
                 }
             });
         }
